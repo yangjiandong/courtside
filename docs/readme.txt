@@ -21,4 +21,10 @@ courside
    >cd ..
    >pip install -r requirements.txt
 
+   2. delply
+   http://dmyz.org/archives/381 
+   nginx.conf,update.py
 
+   use: nginx + uwsgi
+
+   --END
