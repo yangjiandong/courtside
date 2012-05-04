@@ -16,15 +16,19 @@ courside
    [build]
    compiler=mingw32
 
-   >cd D:\ruby-1.9.3-p0-i386-mingw32 
+   >cd D:\ruby-1.9.3-p0-i386-mingw32
    >msys.bat
    >cd ..
    >pip install -r requirements.txt
 
    2. delply
-   http://dmyz.org/archives/381 
+   http://dmyz.org/archives/381
    nginx.conf,update.py
 
    use: nginx + uwsgi
+
+   3. django webservice
+   Welcome to Tastypie!
+   Tastypie is an webservice API framework for Django. It provides a convenient, yet powerful and highly customizable, abstraction for creating REST-style interfaces.
 
    --END
