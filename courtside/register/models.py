@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
 
 
 GENDER_CHOICES = (
         (u'Q', u'Undisclosed'),
-        (u'M', u'Male'),
+        (u'M', u'男士'),
         (u'F', u'Female'),
     )
 
