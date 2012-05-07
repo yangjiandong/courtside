@@ -157,19 +157,41 @@ INSTALLED_APPS = (
     'south',
 )
 
+#
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
+# Also make sure your enable DEBUG in settings.py. Now, you can see that logger show up in the console
+# example:
+#from django.utils.log import getLogger
+#logger = getLogger('app')
+# ..
+#logger.warning("This is warning")
+
 LOGGING = {
-    'version': 1,
+    'version':1,
     'disable_existing_loggers': False,
+    'formatters':{
+        'verbose':{
+            'format' :
+'%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(asctime)s  %(module)s %(message)s'
+        },
+    },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'django.request': {
@@ -177,5 +199,94 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+        'app': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
     }
 }
+
+# other
+LOGGING2 = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s',
+            'datefmt': '%a, %d %b %Y %H:%M:%S %z',
+        },
+        'simple': {
+            'format': '[%(levelname)s] %(asctime)s - %(message)s',
+            'datefmt': '%a, %d %b %Y %H:%M:%S %z',
+        },
+        'django-default-verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'common-logging-v2': {
+            'format': '[%(asctime)s] - %(message)s',
+            'datefmt': '%d/%b/%Y:%H:%M:%S %z',
+        },
+        'parsefriendly': {
+            'format': '[%(levelname)s] %(asctime)s - M:%(module)s, P:%(process)d, T:%(thread)d, MSG:%(message)s',
+            'datefmt': '%d/%b/%Y:%H:%M:%S %z',
+        },
+    },
+    'handlers': {
+        'null': {
+            'level':'DEBUG',
+            'class':'django.utils.log.NullHandler',
+        },
+        'console-simple':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'log-file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.WatchedFileHandler',
+            'formatter': 'verbose',
+            #consider: 'filename': '/var/log/<myapp>/app.log',
+            #will need perms at location below:
+            'filename': 'log/app.log',
+            'mode': 'a', #append+create
+        },
+        'timed-log-file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.TimedRotatingFileHandler', # Python logging lib
+            'formatter': 'parsefriendly',
+            #consider: 'filename': '/var/log/<myapp>/app.log',
+            #will need perms at location below:
+            'filename': 'log/app-timed.log',
+            'when': 'midnight',
+            #'backupCount': '30', #approx 1 month worth
+        },
+        'watched-log-file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.WatchedFileHandler',
+            'formatter': 'parsefriendly',
+            #consider: 'filename': '/var/log/<myapp>/app.log',
+            #will need perms at location below:
+            'filename': 'log/app-watched.log',
+            'mode': 'a', #append+create
+        },
+    },
+    'loggers': {
+        'django': {
+            'level':'DEBUG',
+            'handlers':['console', 'watched-log-file'],
+            'propagate': True,
+        },
+        'django.request': {
+            'level': 'DEBUG',
+            'handlers': ['console', 'watched-log-file'],
+            'propagate': False,
+        },
+    }
+}
+

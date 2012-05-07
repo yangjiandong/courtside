@@ -360,6 +360,9 @@ def login_bro(request):
             email = form.cleaned_data['email']
             user = User.objects.get(email=email)
             user = authenticate(username=user.username, password=password)
+            from django.utils.log import getLogger
+            logger = getLogger('app')
+            logger.warning(user)
             # print user
             login(request, user)
             return HttpResponseRedirect('/')
