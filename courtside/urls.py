@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     url(r'^about/', 'game.views.about', name='about'),
 
     url(r'^$', 'game.views.home', name='home'),
-    
+
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
@@ -32,9 +32,9 @@ urlpatterns = patterns('',
     url(r'^login/complete/', 'register.views.complete_sign_up'),
 
     #twitter stuff
-	url(r'^login/twitter/', 'register.views.begin_twitter_oauth', name='twitter_oauth'),
+  url(r'^login/twitter/', 'register.views.begin_twitter_oauth', name='twitter_oauth'),
     url(r'^twitter/callback/', 'register.views.twitter_callback'),
-    
+
     #edit profile
     url(r'^profile/edit/', 'register.views.profile_edit'),
 
@@ -53,7 +53,7 @@ urlpatterns = patterns('',
     url(r'^leave/game/(?P<id>\d+)/$', 'game.views.leave', name='leave'),
     url(r'^delete/game/(?P<id>\d+)/$', 'game.views.delete', name='delete'),
 
-    # comments application 
+    # comments application
     (r'^comments/', include('django.contrib.comments.urls')),
 
     #api endpoints
