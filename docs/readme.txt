@@ -1,6 +1,13 @@
 courside
 ========
 
+2012.05.14
+----------
+
+   1. django model 文档生成
+   python m2doc.py
+   http://www.cnblogs.com/ken-zhang/archive/2011/03/18/python_django_m2doc.html 
+
 2012.05.04
 ----------
 

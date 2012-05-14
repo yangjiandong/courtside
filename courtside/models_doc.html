@@ -1,0 +1,1236 @@
+
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <title>Data table schema document</title>
+            <style type="text/css">
+                .loopeven {background:#f1f1f1;}
+                .loopodd {}
+            </style>
+        </head>
+        <body>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Group<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>name</td>
+                            <td>name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Message<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>user</td>
+                            <td>user</td>
+                            <td>ForeignKey(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>message</td>
+                            <td>message</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Permission<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>name</td>
+                            <td>name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>content_type</td>
+                            <td>content type</td>
+                            <td>ForeignKey(ContentType)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>codename</td>
+                            <td>codename</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: User<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>username</td>
+                            <td>username</td>
+                            <td>CharField</td>
+                            <td>Required. 30 characters or fewer. Letters, numbers and @/./+/-/_ characters</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>first_name</td>
+                            <td>first name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>last_name</td>
+                            <td>last name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>email</td>
+                            <td>e-mail address</td>
+                            <td>EmailField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>password</td>
+                            <td>password</td>
+                            <td>CharField</td>
+                            <td>Use &#39;[algo]$[salt]$[hexdigest]&#39; or use the &lt;a href=&quot;password/&quot;&gt;change password form&lt;/a&gt;.</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>is_staff</td>
+                            <td>staff status</td>
+                            <td>BooleanField</td>
+                            <td>Designates whether the user can log into this admin site.</td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>is_active</td>
+                            <td>active</td>
+                            <td>BooleanField</td>
+                            <td>Designates whether this user should be treated as active. Unselect this instead of deleting accounts.</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>is_superuser</td>
+                            <td>superuser status</td>
+                            <td>BooleanField</td>
+                            <td>Designates that this user has all permissions without explicitly assigning them.</td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>last_login</td>
+                            <td>last login</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>date_joined</td>
+                            <td>date joined</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: ContentType<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>name</td>
+                            <td>name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>app_label</td>
+                            <td>app label</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>model</td>
+                            <td>python model class name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Session<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>session_key</td>
+                            <td>session key</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>session_data</td>
+                            <td>session data</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>expire_date</td>
+                            <td>expire date</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Site<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>domain</td>
+                            <td>domain name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>name</td>
+                            <td>display name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: LogEntry<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>action_time</td>
+                            <td>action time</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>user</td>
+                            <td>user</td>
+                            <td>ForeignKey(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>content_type</td>
+                            <td>content type</td>
+                            <td>ForeignKey(ContentType)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>object_id</td>
+                            <td>object id</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>object_repr</td>
+                            <td>object repr</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>action_flag</td>
+                            <td>action flag</td>
+                            <td>PositiveSmallIntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>change_message</td>
+                            <td>change message</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Player<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>user</td>
+                            <td>user</td>
+                            <td>ForeignKey(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>gender</td>
+                            <td>gender</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>twitter_oauth_token</td>
+                            <td>twitter oauth token</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>twitter_oauth_secret</td>
+                            <td>twitter oauth secret</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>facebook_oauth_token</td>
+                            <td>facebook oauth token</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>facebook_id</td>
+                            <td>facebook id</td>
+                            <td>IntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>image_url</td>
+                            <td>image url</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Sport<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>sport</td>
+                            <td>项目</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Game<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>owner</td>
+                            <td>owner</td>
+                            <td>ForeignKey(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>sport</td>
+                            <td>sport</td>
+                            <td>ForeignKey(Sport)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>start_date_and_time</td>
+                            <td>start date and time</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>latitude</td>
+                            <td>latitude</td>
+                            <td>DecimalField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>longitude</td>
+                            <td>longitude</td>
+                            <td>DecimalField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>address</td>
+                            <td>address</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>minimum_players</td>
+                            <td>minimum players</td>
+                            <td>IntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>restrictions</td>
+                            <td>restrictions</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>active</td>
+                            <td>active</td>
+                            <td>NullBooleanField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: BaseCommentAbstractModel<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>content_type</td>
+                            <td>content type</td>
+                            <td>ForeignKey(ContentType)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>object_pk</td>
+                            <td>object ID</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>site</td>
+                            <td>site</td>
+                            <td>ForeignKey(Site)</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: Comment<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>content_type</td>
+                            <td>content type</td>
+                            <td>ForeignKey(ContentType)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>object_pk</td>
+                            <td>object ID</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>site</td>
+                            <td>site</td>
+                            <td>ForeignKey(Site)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>user</td>
+                            <td>user</td>
+                            <td>ForeignKey(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>user_name</td>
+                            <td>user&#39;s name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>user_email</td>
+                            <td>user&#39;s email address</td>
+                            <td>EmailField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>user_url</td>
+                            <td>user&#39;s URL</td>
+                            <td>URLField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>comment</td>
+                            <td>comment</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>submit_date</td>
+                            <td>date/time submitted</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>ip_address</td>
+                            <td>IP address</td>
+                            <td>IPAddressField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>is_public</td>
+                            <td>is public</td>
+                            <td>BooleanField</td>
+                            <td>Uncheck this box to make the comment effectively disappear from the site.</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>is_removed</td>
+                            <td>is removed</td>
+                            <td>BooleanField</td>
+                            <td>Check this box if the comment is inappropriate. A &quot;This comment has been removed&quot; message will be displayed instead.</td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: CommentFlag<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>user</td>
+                            <td>user</td>
+                            <td>ForeignKey(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>comment</td>
+                            <td>comment</td>
+                            <td>ForeignKey(Comment)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>flag</td>
+                            <td>flag</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>flag_date</td>
+                            <td>date</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: ApiAccess<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>identifier</td>
+                            <td>identifier</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>url</td>
+                            <td>url</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>request_method</td>
+                            <td>request method</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>accessed</td>
+                            <td>accessed</td>
+                            <td>PositiveIntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: ApiKey<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>user</td>
+                            <td>user</td>
+                            <td>OneToOneField(User)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>key</td>
+                            <td>key</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>created</td>
+                            <td>created</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: CrontabSchedule<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>minute</td>
+                            <td>minute</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>hour</td>
+                            <td>hour</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>day_of_week</td>
+                            <td>day of week</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: IntervalSchedule<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>every</td>
+                            <td>every</td>
+                            <td>IntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>period</td>
+                            <td>period</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: PeriodicTask<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>name</td>
+                            <td>name</td>
+                            <td>CharField</td>
+                            <td>Useful description</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>task</td>
+                            <td>task name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>interval</td>
+                            <td>interval</td>
+                            <td>ForeignKey(IntervalSchedule)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>crontab</td>
+                            <td>crontab</td>
+                            <td>ForeignKey(CrontabSchedule)</td>
+                            <td>Use one of interval/crontab</td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>args</td>
+                            <td>Arguments</td>
+                            <td>TextField</td>
+                            <td>JSON encoded positional arguments</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>kwargs</td>
+                            <td>Keyword arguments</td>
+                            <td>TextField</td>
+                            <td>JSON encoded keyword arguments</td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>queue</td>
+                            <td>queue</td>
+                            <td>CharField</td>
+                            <td>Queue defined in CELERY_QUEUES</td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>exchange</td>
+                            <td>exchange</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>routing_key</td>
+                            <td>routing key</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>expires</td>
+                            <td>expires</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>enabled</td>
+                            <td>enabled</td>
+                            <td>BooleanField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>last_run_at</td>
+                            <td>last run at</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>total_run_count</td>
+                            <td>total run count</td>
+                            <td>PositiveIntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>date_changed</td>
+                            <td>date changed</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: PeriodicTasks<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>ident</td>
+                            <td>ident</td>
+                            <td>SmallIntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>last_update</td>
+                            <td>last update</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: TaskMeta<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>task_id</td>
+                            <td>task id</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>status</td>
+                            <td>task status</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>result</td>
+                            <td>result</td>
+                            <td>PickledObjectField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>date_done</td>
+                            <td>done at</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>traceback</td>
+                            <td>traceback</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: TaskSetMeta<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>taskset_id</td>
+                            <td>task id</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>result</td>
+                            <td>result</td>
+                            <td>PickledObjectField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>date_done</td>
+                            <td>done at</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: TaskState<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>state</td>
+                            <td>state</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>task_id</td>
+                            <td>UUID</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>name</td>
+                            <td>name</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>tstamp</td>
+                            <td>event received at</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>args</td>
+                            <td>Arguments</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>kwargs</td>
+                            <td>Keyword arguments</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>eta</td>
+                            <td>ETA</td>
+                            <td>DateTimeField</td>
+                            <td>date to execute</td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>expires</td>
+                            <td>expires</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>result</td>
+                            <td>result</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>traceback</td>
+                            <td>traceback</td>
+                            <td>TextField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>runtime</td>
+                            <td>execution time</td>
+                            <td>FloatField</td>
+                            <td>in seconds if task successful</td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>retries</td>
+                            <td>number of retries</td>
+                            <td>IntegerField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>worker</td>
+                            <td>worker</td>
+                            <td>ForeignKey(WorkerState)</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>hidden</td>
+                            <td>hidden</td>
+                            <td>BooleanField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="clear:both; margin-top:40px; display:inline;">
+                <table border="0" width="100%">
+                    <tbody>
+                        <tr><td colspan="4" style="border:1px solid #000;"><b>Model Name: WorkerState<b></td></tr>
+                        <tr style="background:#000; color:#fff;"><th width="15%">列名</th><th width="15%">简称</th><th width="15%">列类型</th><th>描述</th><tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>id</td>
+                            <td>ID</td>
+                            <td>AutoField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#f1f1f1">
+                            <td>hostname</td>
+                            <td>hostname</td>
+                            <td>CharField</td>
+                            <td></td>
+                        <tr>
+                        
+                        <tr style="background:#ffffff">
+                            <td>last_heartbeat</td>
+                            <td>last heartbeat</td>
+                            <td>DateTimeField</td>
+                            <td></td>
+                        <tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="margin-top:50px; padding:10px; width:100%;
+            text-align:center;">this document generated by the <a href="http://ken-zhang.cnblogs.com"> django-m2doc</a></div>
+        </body>
+    </html>

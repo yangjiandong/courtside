@@ -14,7 +14,7 @@ class Sport(models.Model):
     """ This will store the sport they are interested in playing in.
 
     """
-    sport = models.CharField(max_length=30)
+    sport = models.CharField(max_length=30, verbose_name = '项目')
 
     def __unicode__(self):
         return "%s" % self.sport
