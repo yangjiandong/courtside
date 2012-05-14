@@ -8,6 +8,26 @@ courside
    python m2doc.py
    http://www.cnblogs.com/ken-zhang/archive/2011/03/18/python_django_m2doc.html 
 
+   2. mssql
+   https://bitbucket.org/Manfre/django-mssql/src
+   https://code.google.com/p/django-mssql/
+
+   pip install django-mssql
+
+DATABASES = {
+    'default': {
+        'NAME': 'my_database',
+        'ENGINE': 'sqlserver_ado',
+        'HOST': 'dbserver\\ss2008',
+        'USER': '',
+        'PASSWORD': '',
+        'OPTIONS' : {
+            'provider': 'SQLOLEDB',
+            'use_mars': True,
+        },
+    }
+}
+
 2012.05.04
 ----------
 
